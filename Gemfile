@@ -23,3 +23,4 @@ end
 
 # Added Gems:
 gem 'bootstrap-sass'
+gem 'simple_form'
