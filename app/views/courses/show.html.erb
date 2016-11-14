@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+<h2><%= @course.title %></h2>
 
 <p>
-  <strong>Content:</strong>
   <%= simple_format(@course.content) %>
 </p>
 

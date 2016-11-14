@@ -16,6 +16,7 @@
   <%= f.hidden_field :content %>
   <%= render "formatting" %>
   <div contenteditable="true" id="course-content-div" placeholder="Start typing here..."></div>
-  <%= f.button :submit, class: "btn btn-primary" %>
 
 <% end %>
+
+<button type="button" name="button" id="external-submit" class="btn btn-primary">Save</button>

@@ -37,6 +37,9 @@ input[type="text"] {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
+}
+
+#course_title {
   padding: 0 !important;
 }
 
@@ -88,6 +91,6 @@ input[type="text"] {
   font-size: 0.9em;
 }
 
-.style-applied {
+.style-applied, #btn-unlink {
   color: $brand-primary !important
 }
