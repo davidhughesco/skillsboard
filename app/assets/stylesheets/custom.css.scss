@@ -1,6 +1,93 @@
 // Bootstrap Fixes
+$font-size-base: 16px;
+$brand-primary: #FF6B6D;
+$light-gray: #F3F3F3;
+$dark-gray: #303030;
+$input-color-placeholder: $light-gray;
+$input-border: transparent;
+$input-border-radius: 0;
+$input-border-focus: transparent;
 
 // Import Bootstrap
+
 @import 'bootstrap';
 
+// CSS Overrides
+
+::selection {
+  background: lighten($brand-primary, 20%);
+}
+::-moz-selection {
+  background: lighten($brand-primary, 20%);
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block;
+  color: $light-gray;
+}
+
+form {
+  padding-top: 3em;
+}
+
+input[type="text"] {
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
 // Custom CSS
+
+#course_title {
+  font-size: 2em;
+  font-weight: 600;
+  padding: 1em
+}
+
+#course-content-div {
+  margin: 1em 0;
+}
+
+#course-content-div:focus {
+  outline: 0px solid transparent;
+}
+
+#content-editor-formatting {
+  background-color: $dark-gray;
+  padding: 2px;
+  border-radius: $border-radius-small;
+  display: inline-block;
+  position: fixed;
+  top: 5px;
+}
+
+#content-editor-formatting a {
+  color: white;
+  background-color: $dark-gray;
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: $border-radius-small
+}
+
+#content-editor-formatting a:hover {
+  color: $dark-gray;
+  background-color: $light-gray;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fa {
+  font-size: 0.9em !important;
+}
+
+.tooltip-inner {
+  font-size: 0.9em;
+}
+
+.style-applied {
+  color: $brand-primary !important
+}

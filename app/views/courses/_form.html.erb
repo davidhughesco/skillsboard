@@ -1,4 +1,4 @@
-<%= simple_form_for(@course) do |f| %>
+<%= simple_form_for @course do |f| %>
 
   <% if @course.errors.any? %>
     <div id="error_explanation">
@@ -12,14 +12,10 @@
     </div>
   <% end %>
 
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
+  <%= f.input :title, label: false, placeholder: "Title" %>
+  <%= f.hidden_field :content %>
+  <%= render "formatting" %>
+  <div contenteditable="true" id="course-content-div" placeholder="Start typing here..."></div>
+  <%= f.button :submit, class: "btn btn-primary" %>
 
 <% end %>
-
-<button id="btn-bold"><b>B</b></button>
-<div id='fake_textarea' contenteditable>
-Select some text and click the button to make it bold...
-<br>Or write your own text
-</div>

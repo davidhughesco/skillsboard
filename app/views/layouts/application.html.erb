@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Skillsboard</title>
+    <title>SkillsBoard</title>
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/553dd3931e.js"></script>
   </head>
   <body>
     <div class="container">
-      <%= yield %>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

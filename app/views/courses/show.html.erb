@@ -7,7 +7,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @course.content %>
+  <%= simple_format(@course.content) %>
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
