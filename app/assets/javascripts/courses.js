@@ -1,7 +1,13 @@
 $(document).ready(function() {
 
-  // Submit button outside of <form>
-  $('#external-submit').on('click', function() { $('form').submit(); });
+  // Show formatting bar on focus...
+  $("#course-content-div").focus(function(){
+    $("#content-editor-formatting").css('visibility','visible');
+  });
+  // ... and hide it when [other] input focused *IMPROVE*
+  $("#course_title").focus(function(){
+    $("#content-editor-formatting").css('visibility','hidden');
+  });
 
   // Hide formatting bar on load
   $("#content-editor-formatting").css('visibility','hidden');
@@ -13,7 +19,6 @@ $(document).ready(function() {
   $('#course-content-div').bind( "mouseenter mouseleave click keypress keydown keyup change blur focus", function(){
     $('#course_content').val($('#course-content-div').html());
   });
-
 
   // Check style status
   $(document).bind("click keydown", function () {
@@ -109,13 +114,7 @@ $(document).ready(function() {
     document.execCommand('redo');
   });
 
-  // Show formatting bar on focus...
-  $("#course-content-div").focus(function(){
-    $("#content-editor-formatting").css('visibility','visible');
-  });
-  // ... and hide it when [other] input focused *IMPROVE*
-  $("#course_title").focus(function(){
-    $("#content-editor-formatting").css('visibility','hidden');
-  });
+  // Submit button outside of <form>
+  $('#external-submit').on('click', function() { $('form').submit(); });
 
 });

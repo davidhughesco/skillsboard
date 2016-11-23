@@ -17,9 +17,14 @@
 
 $(document).ready(function() {
 
-  // Enable Tooltips
+  // Enable tooltips
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
+  });
+
+  // Delay tooltips
+  $('a').tooltip({
+       'delay': { show: 750 }
   });
 
 });

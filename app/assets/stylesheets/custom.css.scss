@@ -1,7 +1,7 @@
 // Bootstrap Fixes
 $font-size-base: 16px;
 $brand-primary: #FF6B6D;
-$light-gray: #F3F3F3;
+$light-gray: #D3D3D3;
 $dark-gray: #303030;
 $input-color-placeholder: $light-gray;
 $input-border: transparent;
@@ -33,26 +33,26 @@ form {
 
 input[type="text"] {
   outline: none;
+  color: $dark-gray;
   border: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-#course_title {
-  padding: 0 !important;
-}
-
 // Custom CSS
 
 #course_title {
-  font-size: 2em;
-  font-weight: 600;
-  padding: 1em
+  margin-top: -1em;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.4em 0 0.6em 0 !important;
+  margin-bottom: -3px;
 }
 
 #course-content-div {
   margin: 1em 0;
+  cursor: text;
 }
 
 #course-content-div:focus {
@@ -93,4 +93,18 @@ input[type="text"] {
 
 .style-applied, #btn-unlink {
   color: $brand-primary !important
+}
+
+.row-padding {
+  margin-top: 3em
+}
+
+h2 a:hover {
+  text-decoration: none
+}
+
+.edit-mode {
+  padding-top: 0.5em;
+  color: lightgray;
+  text-align: right;
 }
