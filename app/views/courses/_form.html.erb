@@ -8,21 +8,9 @@
   </div>
 </div>
 
-
-
 <%= simple_form_for @course do |f| %>
 
-  <% if @course.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
-
-      <ul>
-      <% @course.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <!-- Need to return errors -->
 
   <h1><%= f.input :title, label: false, placeholder: "Course title" %></h1>
   <%= f.hidden_field :content %>

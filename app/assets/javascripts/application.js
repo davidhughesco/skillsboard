@@ -27,4 +27,7 @@ $(document).ready(function() {
        'delay': { show: 750 }
   });
 
+  // Slide alert up after 1 second
+  $(".alert").delay(1000).slideUp(600);
+
 });

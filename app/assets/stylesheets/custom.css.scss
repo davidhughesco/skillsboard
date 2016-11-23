@@ -7,6 +7,8 @@ $input-color-placeholder: $light-gray;
 $input-border: transparent;
 $input-border-radius: 0;
 $input-border-focus: transparent;
+$alert-info-bg: rgba(255,107,109,0.8);
+$alert-info-text: white;
 
 // Import Bootstrap
 
@@ -38,6 +40,16 @@ input[type="text"] {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
+}
+
+.alert {
+  border-radius: 0;
+  border: none !important;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index:9999;
 }
 
 // Custom CSS
